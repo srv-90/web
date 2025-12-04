@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقعي الشخصي</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .logo {
+            width: 200px; /* غير الحجم حسب الحاجة */
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .menu-section {
+            display: none; /* إخفاء القائمة في البداية */
+            margin-top: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 600px; /* غير الارتفاع حسب الحاجة */
+            border: none;
+        }
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- عرض الشعار أولاً -->
+    <img id="logo" src="C:\Users\ISO 22H2\OneDrive\Desktop\LASMALA\website\lasmala.png" alt="شعار الموقع" class="logo">
+    
+    <!-- القائمة (PDF) مخفية في البداية -->
+    <div id="menu-section" class="menu-section">
+        <h2>القائمة</h2>
+        <!-- عرض الـ PDF مباشرة في الصفحة -->
+        <iframe src="C:\Users\ISO 22H2\OneDrive\Desktop\LASMALA\website\menu.pdf" title="قائمة PDF"></iframe>
+        
+        <!-- بديل: رابط لتحميل الـ PDF إذا لم يعمل iframe -->
+        <p>إذا لم يظهر الـ PDF، <a href="menu.pdf" download>اضغط هنا لتحميله</a></p>
+    </div>
+
+    <script>
+        // انتظر 3 ثوانٍ، ثم أخفِ الشعار وأظهر القائمة
+        setTimeout(function() {
+            document.getElementById('logo').style.display = 'none';
+            document.getElementById('menu-section').style.display = 'block';
+        }, 3000); // غير الوقت (بالميلي ثانية) حسب الحاجة، مثل 5000 لـ5 ثوانٍ
+    </script>
+</body>
+</html>

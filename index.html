@@ -44,7 +44,7 @@
             }
         }
         .instagram-section {
-            display: none; /* مخفي في البداية */
+            display: none;
             margin-top: 40px;
             padding: 30px;
             background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
@@ -55,7 +55,7 @@
             align-items: center;
             justify-content: center;
             color: white;
-            animation: fadeIn 1s ease-in-out; /* تأثير fade-in */
+            animation: fadeIn 1s ease-in-out;
         }
         .instagram-logo {
             width: 50px;
@@ -158,20 +158,20 @@
     <!-- الشعار مع التأثير المحسن -->
     <img id="logo" src="lasmala.png" alt="Site Logo" class="logo">
     
+    <!-- القائمة كصور (فوق Instagram بعد اختفاء الشعار) -->
+    <div id="menu-section" class="menu-section">
+        <h2>Menu</h2>
+        <img src="boisson-menu-ANG.png" alt="Boisson Menu" class="pdf-image">
+        <img src="menuBAR-ANG.png" alt="Bar Menu" class="pdf-image">
+        <p>To download the menu as PDF, <a href="menu.pdf" download>click here</a></p>
+    </div>
+
     <!-- قسم Instagram يظهر بعد الشعار -->
     <div id="instagram-section" class="instagram-section">
         <img src="Instagrаm-Logo.png" alt="Instagram Logo" class="instagram-logo">
         <a href="https://www.instagram.com/hostelsmala" target="_blank" class="instagram-link">@hostelsmala</a>
         <p class="instagram-desc">Follow us for updates and specials! 10K+ followers</p>
         <button class="follow-btn" onclick="window.open('https://www.instagram.com/hostelsmala', '_blank')">Follow Now</button>
-    </div>
-
-    <!-- القائمة كصور -->
-    <div id="menu-section" class="menu-section">
-        <h2>Menu</h2>
-        <img src="boisson-menu-ANG.png" alt="Boisson Menu" class="pdf-image">
-        <img src="menuBAR-ANG.png" alt="Bar Menu" class="pdf-image">
-        <p>To download the menu as PDF, <a href="menu.pdf" download>click here</a></p>
     </div>
 
     <!-- Footer بسيط -->
@@ -186,9 +186,9 @@
         // بعد انتهاء fade-in الشعار (2 ثوانٍ)، أظهر قسم Instagram
         setTimeout(function() {
             document.getElementById('instagram-section').style.display = 'flex';
-        }, 2000); // بعد 2 ثوانٍ
+        }, 2000);
 
-        // بعد 3 ثوانٍ إضافية (إجمالي 5 ثوانٍ)، أخفِ الشعار وأظهر القائمة
+        // بعد 3 ثوانٍ إضافية (إجمالي 5 ثوانٍ)، أخفِ الشعار وأظهر القائمة فوق Instagram
         setTimeout(function() {
             const logo = document.getElementById('logo');
             logo.style.opacity = '0';
@@ -196,7 +196,7 @@
                 logo.style.display = 'none';
                 document.getElementById('menu-section').style.display = 'block';
             }, 1000);
-        }, 5000); // إجمالي 5 ثوانٍ
+        }, 5000);
 
         // زر العودة إلى الأعلى
         window.onscroll = function() {

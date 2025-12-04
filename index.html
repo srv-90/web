@@ -1,66 +1,91 @@
-     <!DOCTYPE html>
-     <html lang="ar" dir="rtl">
-     <head>
-         <meta charset="UTF-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <title>موقعي الشخصي</title>
-         <style>
-             body {
-                 font-family: Arial, sans-serif;
-                 text-align: center;
-                 background-color: white; /* خلفية بيضاء */
-                 margin: 0;
-                 padding: 20px;
-             }
-             .logo {
-                 width: 200px;
-                 height: auto;
-                 margin-bottom: 20px;
-             }
-             .menu-section {
-                 display: none;
-                 margin-top: 20px;
-             }
-             .pdf-image {
-                 width: 100%;
-                 max-width: 800px;
-                 height: auto;
-                 margin-bottom: 10px;
-                 border: 1px solid #ddd;
-             }
-             a {
-                 display: inline-block;
-                 margin-top: 10px;
-                 padding: 10px 20px;
-                 background-color: #007bff;
-                 color: white;
-                 text-decoration: none;
-                 border-radius: 5px;
-             }
-             a:hover {
-                 background-color: #0056b3;
-             }
-         </style>
-     </head>
-     <body>
-         <!-- الشعار -->
-         <img id="logo" src="lasmala.png" alt="شعار الموقع" class="logo">
-         
-         <!-- القائمة كصور -->
-         <div id="menu-section" class="menu-section">
-             <h2>القائمة</h2>
-             <img src="boisson-menu-ANG.png" alt="صفحة 1" class="pdf-image">
-             <img src="menuBAR-ANG.png" alt="صفحة 2" class="pdf-image">
-             <!-- أضف المزيد إذا لزم الأمر -->
-             <p>لتحميل القائمة كـ PDF، <a href="menu.pdf" download>Download</a></p>
-         </div>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        .logo {
+            width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .menu-section {
+            display: none;
+            margin-top: 20px;
+        }
+        .pdf-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+        .instagram-section {
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            display: flex; /* جعل الشعار والنص في نفس السطر */
+            align-items: center; /* محاذاة عمودية */
+            justify-content: center; /* محاذاة أفقية */
+        }
+        .instagram-logo {
+            width: 30px; /* حجم أصغر للشعار */
+            height: auto;
+            margin-right: 10px; /* مسافة بين الشعار والنص */
+        }
+        .instagram-link {
+            font-size: 18px;
+            color: #007bff; /* لون الرابط */
+            text-decoration: none;
+        }
+        .instagram-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- الشعار -->
+    <img id="logo" src="lasmala.png" alt="Site Logo" class="logo">
+    
+    <!-- القائمة كصور -->
+    <div id="menu-section" class="menu-section">
+        <h2>Menu</h2>
+        <img src="page1.png" alt="Page 1 of Menu" class="pdf-image">
+        <img src="page2.png" alt="Page 2 of Menu" class="pdf-image">
+        <p>To download the menu as PDF, <a href="menu.pdf" download>click here</a></p>
+    </div>
 
-         <script>
-             setTimeout(function() {
-                 document.getElementById('logo').style.display = 'none';
-                 document.getElementById('menu-section').style.display = 'block';
-             }, 3000);
-         </script>
-     </body>
-     </html>
-     
+    <!-- قسم Instagram في الأسفل -->
+    <div class="instagram-section">
+        <img src="Instagrаm-Logo.png" alt="Instagram Logo" class="instagram-logo">
+        <a href="https://www.instagram.com/hostelsmala" target="_blank" class="instagram-link">@Hostelsmala</a>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            document.getElementById('logo').style.display = 'none';
+            document.getElementById('menu-section').style.display = 'block';
+        }, 3000);
+    </script>
+</body>
+</html>

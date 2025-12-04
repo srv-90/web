@@ -16,6 +16,13 @@
             width: 200px;
             height: auto;
             margin-bottom: 20px;
+            opacity: 0; /* بداية مخفي */
+            animation: fadeIn 2s ease-in-out forwards; /* تأثير fade-in */
+        }
+        @keyframes fadeIn { /* تعريف التأثير */
+            to {
+                opacity: 1;
+            }
         }
         .menu-section {
             display: none;
@@ -43,19 +50,18 @@
         .instagram-section {
             margin-top: 40px;
             padding: 20px;
-            border-top: 1px solid #ddd;
-            display: flex; /* جعل الشعار والنص في نفس السطر */
-            align-items: center; /* محاذاة عمودية */
-            justify-content: center; /* محاذاة أفقية */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .instagram-logo {
-            width: 30px; /* حجم أصغر للشعار */
+            width: 30px;
             height: auto;
-            margin-right: 10px; /* مسافة بين الشعار والنص */
+            margin-right: 10px;
         }
         .instagram-link {
             font-size: 18px;
-            color: #007bff; /* لون الرابط */
+            color: #007bff;
             text-decoration: none;
         }
         .instagram-link:hover {
@@ -64,21 +70,21 @@
     </style>
 </head>
 <body>
-    <!-- الشعار -->
+    <!-- الشعار مع التأثير -->
     <img id="logo" src="lasmala.png" alt="Site Logo" class="logo">
     
     <!-- القائمة كصور -->
     <div id="menu-section" class="menu-section">
         <h2>Menu</h2>
-        <img src="page1.png" alt="Page 1 of Menu" class="pdf-image">
-        <img src="page2.png" alt="Page 2 of Menu" class="pdf-image">
+        <img src="boisson-menu-ANG.png" alt="Boisson Menu" class="pdf-image">
+        <img src="menuBAR-ANG.png" alt="Bar Menu" class="pdf-image">
         <p>To download the menu as PDF, <a href="menu.pdf" download>click here</a></p>
     </div>
 
     <!-- قسم Instagram في الأسفل -->
     <div class="instagram-section">
         <img src="Instagrаm-Logo.png" alt="Instagram" class="instagram-logo">
-        <a href="https://www.instagram.com/hostelsmala" target="_blank" class="instagram-link">Hostelsmala</a>
+        <a href="https://www.instagram.com/hostelsmala" target="_blank" class="instagram-link">@hostelsmala</a>
     </div>
 
     <script>
@@ -89,4 +95,3 @@
     </script>
 </body>
 </html>
-

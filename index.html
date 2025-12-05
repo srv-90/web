@@ -57,21 +57,27 @@
             color: white;
             animation: fadeIn 1s ease-in-out;
         }
+        .instagram-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
         .instagram-logo {
             width: 50px;
             height: auto;
-            margin-bottom: 10px;
+            margin-right: 10px;
+            transform: translateY(+4px);
             transition: transform 0.3s ease;
         }
         .instagram-logo:hover {
-            transform: scale(1.1);
+            transform: scale(1.1) translateY(+4px);
         }
         .instagram-link {
             font-size: 20px;
             font-weight: bold;
             color: rgb(83, 83, 83);
             text-decoration: none;
-            margin-bottom: 10px;
             transition: color 0.3s ease;
         }
         .instagram-link:hover {
@@ -150,45 +156,38 @@
             }
             .instagram-logo {
                 width: 40px;
+                transform: translateY(-1px); 
+            }
+            .instagram-header {
+                flex-direction: column;
             }
         }
     </style>
 </head>
 <body>
-    <!-- الشعار مع التأثير المحسن -->
     <img id="logo" src="lasmala.png" alt="Site Logo" class="logo">
-    
-    <!-- القائمة كصور (فوق Instagram بعد اختفاء الشعار) -->
     <div id="menu-section" class="menu-section">
         <h2>THE SMALA MENU</h2>
         <img src="boisson-menu-ANG.png" alt="Boisson Menu" class="pdf-image">
         <img src="menuBAR-ANG.png" alt="Bar Menu" class="pdf-image">
         <p>To download the menu as PDF, <a href="menu.pdf" download>click here</a></p>
     </div>
-
-    <!-- قسم Instagram يظهر بعد الشعار -->
     <div id="instagram-section" class="instagram-section">
-        <img src="Instagrаm-Logo.png" alt="Instagram Logo" class="instagram-logo">
-        <a href="https://www.instagram.com/hostelsmala" target="_blank" class="instagram-link">@hostelsmala</a>
+        <div class="instagram-header">
+            <img src="Instagrаm-Logo.png" alt="Instagram Logo" class="instagram-logo">
+            <a href="https://www.instagram.com/hostelsmala" target="_blank" class="instagram-link">@hostelsmala</a>
+        </div>
         <p class="instagram-desc">Follow us for updates and specials! 20K+ followers</p>
         <button class="follow-btn" onclick="window.open('https://www.instagram.com/hostelsmala', '_blank')">Follow Now</button>
     </div>
-
-    <!-- Footer بسيط -->
     <footer>
         &copy; 2025 My Site. All rights reserved.
     </footer>
-
-    <!-- زر العودة إلى الأعلى -->
     <button class="back-to-top" onclick="scrollToTop()">↑</button>
-
     <script>
-        // بعد انتهاء fade-in الشعار (2 ثوانٍ)، أظهر قسم Instagram
         setTimeout(function() {
             document.getElementById('instagram-section').style.display = 'flex';
         }, 2000);
-
-        // بعد 3 ثوانٍ إضافية (إجمالي 5 ثوانٍ)، أخفِ الشعار وأظهر القائمة فوق Instagram
         setTimeout(function() {
             const logo = document.getElementById('logo');
             logo.style.opacity = '0';
@@ -197,8 +196,6 @@
                 document.getElementById('menu-section').style.display = 'block';
             }, 1000);
         }, 5000);
-
-        // زر العودة إلى الأعلى
         window.onscroll = function() {
             const button = document.querySelector('.back-to-top');
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -207,11 +204,9 @@
                 button.classList.remove('show');
             }
         };
-
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 </body>
 </html>
-
